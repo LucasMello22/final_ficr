@@ -1,16 +1,34 @@
 # final_ficr
 
-A new Flutter project.
+A new Flutter project to create a login system
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Starting the project to build a login and registration system that uses firebase.
 
-A few resources to get you started if this is your first Flutter project:
+## where did I stop
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+I Stoped in end video 1
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Videos
+
+### Main screen - Formatting (part 1)
+https://www.youtube.com/watch?v=gAkcAtZjURA
+
+### Main screen - Formatting (part 2)
+https://www.youtube.com/watch?v=mB30TKfuk70
+
+### Main screen  - Form validation
+https://www.youtube.com/watch?v=bZVJuqeUrwI
+
+### Secondary screen - Internal
+https://www.youtube.com/watch?v=5TOU1YC-dXc
+
+### Firebase - Project creation and App configuration
+https://www.youtube.com/watch?v=LdHTm_DOKrc
+
+### Firebase - User registration
+https://youtu.be/4X10yUhgZwA
+
+### Firebase - Login / Logout
+https://youtu.be/bCwc1dbmOpI
