@@ -12,10 +12,10 @@ Videos 1, 2, 3 and 4 finished (login, registration and internal pages), starting
 
 ## Videos
 
-### Main screen - Formatting (part 1)
+### [x] Main screen - Formatting (part 1)
 https://www.youtube.com/watch?v=gAkcAtZjURA
 
-### Main screen - Formatting (part 2)
+### [x] Main screen - Formatting (part 2)
 https://www.youtube.com/watch?v=mB30TKfuk70
 
 ### Main screen  - Form validation
