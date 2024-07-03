@@ -17,6 +17,8 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   bool entrar = true;
 
+  final _formkey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,6 +37,7 @@ class _LoginState extends State<Login> {
         child: SingleChildScrollView(
           padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
           child: Form(
+            key: _formkey,
             child: Column(
               children: [
                 Icon(
@@ -48,6 +51,21 @@ class _LoginState extends State<Login> {
                   height: 20,
                 ),
                 TextFormField(
+                  validator: (String? value) {
+                    if (value == null) {
+                      return "O campo E-mail precisa ser preenchido";
+                    }
+                    if (value.length < 5) {
+                      return "O campo E-mail precisa ter o mínimo de 5 caracteres";
+                    }
+                    if (!value.contains("@")) {
+                      return "O campo E-mail precisa ser ter o ( @ )";
+                    }
+                    if (!value.contains(".")) {
+                      return "O campo E-mail precisa ter o ( . )";
+                    }
+                    return null;
+                  },
                   decoration: InputDecoration(
                     hintText: "E-mail",
                     fillColor: Colors.white,
@@ -71,6 +89,15 @@ class _LoginState extends State<Login> {
                   height: 5,
                 ),
                 TextFormField(
+                  validator: (String? value) {
+                    if (value == null) {
+                      return "O campo Senha precisa ser preenchido";
+                    }
+                    if (value.length < 5) {
+                      return "O campo Senha precisa ter o mínimo de 8 caracteres";
+                    }
+                    return null;
+                  },
                   decoration: InputDecoration(
                     hintText: "Senha",
                     fillColor: Colors.white,
@@ -97,6 +124,15 @@ class _LoginState extends State<Login> {
                     children: [
                       const SizedBox(height: 5),
                       TextFormField(
+                        validator: (String? value) {
+                          if (value == null) {
+                            return "O campo Confirme a senha precisa ser preenchido";
+                          }
+                          if (value.length < 8) {
+                            return "O campo Confirme a senha precisa ter o mínimo de 8 caracteres";
+                          }
+                          return null;
+                        },
                         decoration: InputDecoration(
                           hintText: "Confirme a Senha",
                           fillColor: Colors.white,
@@ -119,6 +155,15 @@ class _LoginState extends State<Login> {
                       ),
                       const SizedBox(height: 5),
                       TextFormField(
+                        validator: (String? value) {
+                          if (value == null) {
+                            return "O campo Nome precisa ser preenchido";
+                          }
+                          if (value.length < 3) {
+                            return "O campo Nome precisa ter o mínimo de 3 caracteres";
+                          }
+                          return null;
+                        },
                         decoration: InputDecoration(
                           hintText: "Nome",
                           fillColor: Colors.white,
@@ -149,7 +194,9 @@ class _LoginState extends State<Login> {
                   child: SizedBox(
                     height: 40,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        botaoEntrar();
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: (entrar)
                             ? Color.fromARGB(255, 248, 30, 14)
@@ -188,5 +235,13 @@ class _LoginState extends State<Login> {
         ),
       ),
     );
+  }
+
+  botaoEntrar() {
+    if (_formkey.currentState!.validate()) {
+      print("Formulario Funcionando!");
+    } else {
+      print("Formulario Não Funcionando!");
+    }
   }
 }
