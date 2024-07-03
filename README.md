@@ -12,22 +12,22 @@ I Stoped in end video 1
 
 ## Videos
 
-### Tela principal - Formatação (parte 1)
+### Main screen - Formatting (part 1)
 https://www.youtube.com/watch?v=gAkcAtZjURA
 
-### Tela principal - Formatação (parte 2)
+### Main screen - Formatting (part 2)
 https://www.youtube.com/watch?v=mB30TKfuk70
 
-### Tela principal - Validação de formulários
+### Main screen  - Form validation
 https://www.youtube.com/watch?v=bZVJuqeUrwI
 
-### Tela secundária - Interna
+### Secondary screen - Internal
 https://www.youtube.com/watch?v=5TOU1YC-dXc
 
-### Firebase - Criação de projeto e configuração do App
+### Firebase - Project creation and App configuration
 https://www.youtube.com/watch?v=LdHTm_DOKrc
 
-### Firebase - Cadastro de Usuários
+### Firebase - User registration
 https://youtu.be/4X10yUhgZwA
 
 ### Firebase - Login / Logout
