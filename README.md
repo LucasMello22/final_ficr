@@ -8,7 +8,7 @@ Starting the project to build a login and registration system that uses firebase
 
 ## where did I stop
 
-Videos 1 and 2 finished, starting video 3...
+Videos 1, 2 and 3 finished, starting video 4...
 
 ## Videos
 
