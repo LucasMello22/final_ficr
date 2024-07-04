@@ -8,7 +8,7 @@ Starting the project to build a login and registration system that uses firebase
 
 ## where did I stop
 
-Videos 1, 2, 3 and 4 finished (login, registration and internal pages), starting video 5...
+Videos 1, 2, 3, 4 and 5 finished (login, registration, internal pages and firebase add), starting video 6...
 
 ## Videos
 
