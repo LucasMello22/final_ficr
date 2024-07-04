@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "41943363712",
+    "project_id": "final-ficr",
+    "storage_bucket": "final-ficr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41943363712:android:75b4751412c1941e0c3665",
+        "android_client_info": {
+          "package_name": "com.example.final_ficr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnSYrwzS1LoDUpT-nRkD9AeKrHDbiMdfE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
