@@ -4,12 +4,12 @@ A new Flutter project to create a login system
 
 ## Getting Started
 
-Starting the project to build a login and registration system that uses firebase.
+The project to build a login and registration system that uses Firebase was completed according to the reference videos
 
 ## where did I stop
 
-Videos 1, 2, 3, 4, 5 and 6 finished. Starting video 7...\
-Screens deployed: login, registration, internal pages\
+Videos finished. \
+Screens deployed: login, registration and internal pages\
 Firebase: firebase add, auth and user registration.
 
 ## Videos
