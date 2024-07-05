@@ -8,8 +8,8 @@ Starting the project to build a login and registration system that uses firebase
 
 ## where did I stop
 
-Videos 1, 2, 3, 4, 5 and 6 finished. Starting video 7...
-Screens deployed: login, registration, internal pages
+Videos 1, 2, 3, 4, 5 and 6 finished. Starting video 7...\
+Screens deployed: login, registration, internal pages\
 Firebase: firebase add and auth email.
 
 ## Videos
