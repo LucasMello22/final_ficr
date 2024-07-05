@@ -14,4 +14,23 @@ class AuthService {
     );
     await userCredential.user!.updateDisplayName(nome);
   }
+
+  logUser({
+    required String email,
+    required String senha,
+  }) async {
+    try {
+      await _firebaseAuth.signInWithEmailAndPassword(
+        email: email,
+        password: senha,
+      );
+      return null;
+    } on FirebaseAuthException catch (e) {
+      return e.message;
+    }
+  }
+
+  logout() async {
+    return _firebaseAuth.signOut();
+  }
 }

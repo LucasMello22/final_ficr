@@ -1,3 +1,4 @@
+import 'package:final_ficr/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -67,7 +68,9 @@ class _InternaState extends State<Interna> {
               ),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                AuthService().logout();
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color.fromARGB(255, 248, 30, 14),
                 shape: RoundedRectangleBorder(
