@@ -1,4 +1,6 @@
+import 'package:final_ficr/auth.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -11,6 +13,12 @@ class _LoginState extends State<Login> {
   bool entrar = true;
 
   final _formkey = GlobalKey<FormState>();
+
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _senhaController = TextEditingController();
+  final TextEditingController _nomeController = TextEditingController();
+
+  AuthService _authServ = AuthService();
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +54,7 @@ class _LoginState extends State<Login> {
                   height: 20,
                 ),
                 TextFormField(
+                  controller: _emailController,
                   validator: (String? value) {
                     if (value == null) {
                       return "O campo E-mail precisa ser preenchido";
@@ -84,6 +93,7 @@ class _LoginState extends State<Login> {
                   height: 5,
                 ),
                 TextFormField(
+                  controller: _senhaController,
                   validator: (String? value) {
                     if (value == null) {
                       return "O campo Senha precisa ser preenchido";
@@ -119,37 +129,7 @@ class _LoginState extends State<Login> {
                     children: [
                       const SizedBox(height: 5),
                       TextFormField(
-                        validator: (String? value) {
-                          if (value == null) {
-                            return "O campo Confirme a senha precisa ser preenchido";
-                          }
-                          if (value.length < 8) {
-                            return "O campo Confirme a senha precisa ter o mínimo de 8 caracteres";
-                          }
-                          return null;
-                        },
-                        decoration: InputDecoration(
-                          hintText: "Confirme a Senha",
-                          fillColor: Colors.white,
-                          filled: true,
-                          hintStyle: const TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w200,
-                            fontSize: 16,
-                          ),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                        ),
-                        style: const TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w200,
-                          fontSize: 16,
-                        ),
-                        obscureText: true,
-                      ),
-                      const SizedBox(height: 5),
-                      TextFormField(
+                        controller: _nomeController,
                         validator: (String? value) {
                           if (value == null) {
                             return "O campo Nome precisa ser preenchido";
@@ -233,8 +213,24 @@ class _LoginState extends State<Login> {
   }
 
   botaoEntrar() {
+    String email = _emailController.text;
+    String senha = _senhaController.text;
+    String nome = _nomeController.text;
+
     if (_formkey.currentState!.validate()) {
-      print("Formulario Funcionando!");
+      if (entrar) {
+        print("Entrada Validada!");
+      } else {
+        print("Cadastro Validado!");
+        print("${_emailController.text}");
+        print("${_senhaController.text}");
+        print("${_nomeController.text}");
+        _authServ.cadUser(
+          email: email,
+          senha: senha,
+          nome: nome,
+        );
+      }
     } else {
       print("Formulario Não Funcionando!");
     }
